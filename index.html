@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Index - Medicio Bootstrap Template</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Medicio
+  * Template URL: https://bootstrapmade.com/medicio-free-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header sticky-top">
+        <div class="branding d-flex align-items-center">
+
+            <div class="container position-relative d-flex align-items-center justify-content-end">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <img src="assets/img/logo/logo.png" alt="">
+                    <!-- Uncomment the line below if you also wish to use a text logo -->
+                    <!-- <h1 class="sitename">Medicio</h1>  -->
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="#hero" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+
+                        <li id="registerLink"><a href="Register.html">Register</a></li>
+                        <li id="loginLink"><a href="Login.html">Login</a></li>
+                        <li id="profileLinkBtn d-none"><a id="profileLink" href="profile.html">Profile</a></li>
+                        <li id="providerLinkBtn d-none"><a id="providerLink" href="Provider.html">Profile</a></li>
+                        <li id="logoutLink" style="display: none;"><a href="#" id="logout">Logout</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+
+                <a class="cta-btn" href="task.html">Post job</a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+
+            <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="5000">
+
+                <!-- Slide 1: General Home Services -->
+                <div class="carousel-item active">
+                    <img width="100" style="width: 100%; height: auto; object-fit: cover;"
+                        src="data:image/jpeg;base64,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"
+                        alt="Home services" class="d-block w-100">
+                    <div class="container">
+                        <h2>All Services in One Place</h2>
+                        <p>Need a plumber, electrician, cleaner, or anything else? We connect you with trusted service
+                            providers across Egypt.</p>
+                        <a href="#services" class="btn-get-started">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Service Provider -->
+                <div class="carousel-item">
+                    <img style="width: 100%; height: auto; object-fit: cover;"
+                        src="data:image/jpeg;base64,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"
+                        alt="Worker performing service" class="d-block w-100">
+                    <div class="container">
+                        <h2>Professional Help, Just a Tap Away</h2>
+                        <p>Book your service in minutes, browse provider profiles and ratings, and get things done the
+                            smart way.</p>
+                        <a href="#how-it-works" class="btn-get-started">See How It Works</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3: App / Delivery -->
+                <div class="carousel-item">
+                    <img style="width: 100%; height: auto; object-fit: cover;"
+                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA2gMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQMGAAIHAf/EAEIQAAIBAwIDBgMGAggEBwAAAAECAwAEEQUhEhMxBiJBUWFxFDKRI0KBobHBFWIzUlRygpKi0QckRFMWJTRDc+Hx/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAEDAgQF/8QAIhEAAgICAgIDAQEAAAAAAAAAAAECEQMSITEiQQRCUWEy/9oADAMBAAIRAxEAPwDsroGThNaGMBcBfpUvvt71mPMUCoEisoogxxvUMNmXKysfHYUfLkxtjyrEACLjpimLVGhjbOQd60aR4vm3U0QPPwqCeSHGGdfrWWDQFfyvNCVTYePrQmhRcNxNj0omXDA8HSt9OC9/hra6I9zTDx1qK7jaS3ZVG7Dalutax/DZIQFDcR72fAUwtL+2ukUxSKSRnhB6UUyzpgmnWCoAX+bHSjDFxMQOmK9lEqSkohwalj2B4tjS4RlKjyNCqjwNDXL8o4x18aNO3hUMsIl+ahGpLjg0sXLxb9QcYoqh7e3ERzmiKGEU0uTSXHDv0NRWqPEmDjhz3fMURgEYNZsPakOjUtXuTitTjOa2ByKBkUj4FL2HE5NGTHcihOjGtolMmgTeiiuKit/mFTtSfZuPRGR3TQjjv0Z4GhmH2lIYBrY+wj96R8NPtb/o4x70jHSssaFidptSHSc/jvU0GsTk8U0xYn1qqrnzqUOR41dSMOJdBriBe475968bX58Y5hI8qp/MI8a9Ep8zT2X4Gham1yQ9GYfjQsuptJ1c0iWQ+de8zNG4aDKbUpLccaTsvnk7Vcuyssl3pyXUoAaTfA8q5tIwPVS1dP7M4Gi2mF4cxjasTdi1qQh7aYNwB5rVatJ3hfKuy46YNO+3FwI9UVGcAcAxVdVeI8QORTvhDRabHtFcwkB3Ei+Tf706g16G4HeXlt5ZyDVJsLe4u5hDbqST4+ApyJbbSAVaRGmG0ruQEi/3OPCk5JD1LIdWMA4pkHAOvnSTVe3sVrKIrS3DnxZsn9MfrVP7VdorK6hKwTCReI5K4OTjrk/tVckuEMa8gKsXgqjvFvWsNooonVdL7f2F0HW5iMLpjLA5U/uKsEGs2k0fGG7p6MNwfxrg88ktpaiKRszP3n3+X0pp2U16WwvVick28uFkUn8x5UJr2Jpro7P/ABW2I2JNaHWbUHD8SepHWqrdyhT3dqBluWAPf2q2kaJKUi0XXaRIywgVWx0JNbdntcm1O5ngmjC8KhlK9MeVUaWcknc1YuwUq/GXKY3ZAfof/usuqHyW+VOpqCOJnY7Uad698MVOxuNsgiiMbZqV62rVqLHRqflPtQxHfzRR6GhfvGgADXOiD3pH0qw6osbMvMfhGKWciz/tNJoChJFtXvJY+NZHKPOp1mAqvAEPw8nhivDbT+GKMFwtercKRRwFsCEFwP8A2/zrVorob8o/WmXxLAbdaglDz7NIwz5GlSAXszDIlwMeOavnZbX7GDR4I7mdUdRg5rn11oayk/8AMSfWk8WnaldXo02xVpHALFm2VF/rMfAUKl2Jpvo6N2wjt7rUo7ggOrRgLSJbH7RRaueInATzpidLils45bjVV+xAQlY8qx/lJIz70Xo0unWLlluRJM3dVyCAKJSS6HFMkvpoOzWkyu9wPiSo4cj5j/VHlVD1q6uL5RJqkogxGW4FHFxFjsAPPAH5VN2jmvW1yaTULdrVeLmRSKe4x6DhPQ+dI7G3utS19udcM8nOHfY5J8gPPpXPJ1ydEUnwWfs12Rluoebf92I45QXc4HrVog7NWVpCERQ2PFhv9a9e8lWLkJOkd7bHZG2DD28QfPwpnb3JurZZWjaNiO8p8D71ByOhRo552p7PNEz3FqzYO5TrVSicczI7r/of/wBrr2pf0bAjqPpXI9Y+z1eWJMBsg7VTFO1TJ5YVyjo1vcvJaQM/Uxrnf0rSSbNLuz/Mn0eJnfOD3fQeVHGD1rqi+DlkqZE0gJ61ZOwh/wDNz/8AC36iq3JyovDLeVWTsMCdV5hHDiMgDz6UzDL/AFleZrM1M0emozWzNgVpmgDD0qAfNU7nY1APnpiFfaFQxXO4quG2jye5Vn1gcUhHkKQFTk0AUVXyOmK3Eh86Spd56kVKL6AHhB71Buhwku+5FTo6+YpCbtcjBFSx3QP3qdiofK4qVZB1pRHdA/eBqdbnp0/GmmDQzw0rose7McAepqySQRaNp4gBHMJzMV2MrY6ewoDSbZNONvcajExmkkHLQ7cOQSCfXbpW17dC4aWdcu3XBOML61ic+AhHZld1DVp2MhwXupUbD5zyh5DPjSiS7yOE9SMNkk53o7V3hijZ7SM5Yd+Q+A8frtVd5hGMZ3qSmXcR1c3El1pAtGAkjUcSAjPCf2FD9hNRgtr7iuOnCSFPRGBG+PrTHQrdJ1dd8huHHpvVZ0YoNY1CEjijBcHzI4qxKWyZSEakjrq29jq8q3E9sHZRlXZdxQutTSW7MtmhPAuWC9celDQXklrptvKl1EzRoAxdwpIA6/zA/WhLHW1uLlp2bjQphiqnFRaaL0Kr7UoxC8sGpyuipxujqDw+h8RXPA5vrqe7LBSWJG9O+3XaJdRuPgrP+hU/aFduI+VJbOJVUibBUjqvhV8apWc2WVui9dkGJ0xu9lVIwD4U3Y+tVvstcr3ok6FTn3HSnbS71fG+CGRckg4eLJGTTfs3OU1i23wvHg/iKRK+TU9vJwTI6Eh1YEe9UJM69XuKit2ZoULjBKipamaXRpL8taDpW0/yfjXgproR4/SoV+cVLJ0qNPmoAA1MZnb2pYYxTS/3nag+GgDgMmna1jhGnzgVENL1lDtYTj1xXZ49Y08nfOf7tSrq+m57zH/JVNI/pnZnHUstTQYeynJ/u1ILe/HW0nH+A12H+LaZ5/VakGp6SVBJ3/u0tF+j2Zx+Nr3iVVs7gkkADgO5q3aHBJaXLOtq1xLbkfaZGGk8VQEeHn4nyHW5DU9J65/00j7HaP8Aw6W9uXkWeITP8G++QrYJz5dAPrUsq1VopjWzpgdxKs+qi0jkcXDyLxNIxPeznJ/AGiuzqFL2e0kQOY2KSA7jANB9pbL/AJx76BVEvCCCSe6Qdm/L8qsfZy7sdQuWurd1+KaBTcwEEFT5+ozkVyp2dSgopmur6Et66tEqcKJhYzspNJbbsd9ojXhUFd2K7hj/ALVZtWu7izwYopJCegjQNn8xWwa4+HErxqCRnG+a1qOxNcabbaNYXU0APEIm3PUbbk+tco0G9WPV5L0jKszHhJzkE+ddO19LyXQdUmuoljCwPy8S8X5YGK5bZILcyHfhRTzFxtxeGKaSSE27Lbd9oNOitz8MkpdhvFnCg1T9X17Ub4GEy8qD/tx9D7morm45pwECL6daHdc91RkmnGKRnJllLgHjQs4xsD+1NbbhERyQu+cEUDAgHe6DpnFH2ozDnK4rbJxHHZ2dIp5t8pKMA+Xj+1TfxQDbiH1ofsbGsuu2ySY5bNhgdq6u3ZLSD/00e3Xat443ZjK6o5lHqgJ2Io+1vEkccbgYOetdDtexGmTsGFsqp5jxqe47GaHEnCtph/Bs1WqJWNey+oDUNJhl4gXA4W38tqbiqzpHZmG0lE9rNJAMYwh2NPVtZF/6uTH8yg1hrkFdEs33fesFKZrm7WVgOB1B2PSt11GVd3hOPQ1pRYtkMZelRR/OKG/iMbZBUivE1C3R++/D70tWO0a3YzM1D8JqWS6t3kbEq/WvObB/3F+tLVhZxxbwAfO31rZb1eveJ9DSpbjb+irZbor0i/Oiyg2F/t0kP4178e2P6OT/ADUrF/KvyxLXp1K4/qJRY6GTX82DiMgeprotpG9po9rC+z8vLgnxO5/WubdnBNqet2tu4HLL8T+y7munzJJdz8EXFtvlVzj3qGZ2qRbCqdiS406TVpktoXwMjJ4SwB8M0Dp2gX3ZntN/ETy5LFo2hmkTbhzvnz2KjyroB060lt1Se258YThHNXc/vVdkfSbfUmgN3crABIZIeYxyyAZXHXYMCB4gnyqkMEVH+k555N/waNcIAW2wN80tvdbs4l5LXlueL7qPxNn2FJrFLq2nkSKVXikctaWM6mCYR/ycRPF7bY86ij17SpJpSyTw3MRxLHOvLKn1BrDxyTLwyQl2adu9b+D0MwsrSSXR5aoo34PFj5D9yK5dIzh+VcAh88TK4wfTb2q4doLy31uZbayjlvLsnuGJTgD08T+lXbSdJmk0G0soIRLMkQWR76F1VD0IG2TgnGM9BW44nrZDJk8qRxjgDH0qWKMA8RG/QV0TtX2Tt0CQ2U1q2qFu7b21sU5q4PhxHB267DFUO5jaF2hkUpIjFWUjGD4isyi4mU7FzrwhioOF8aliXitt8A/L/ttUq7K+CQrDAbhzuK8tlWWQcRPERvw7Y86zfBSKHHY60NzrUKTOQvFlRnHE2NsHz9Ksc+q3EczIZnIBONzvvWdi9Ph/jFgzShuGNpmjkGBxY2YeakY/Olc0rG4lygXDnZTkdfCjDO5MeaFJDqDtJfQJwRXUyL5BjWSa/eStxPcyMfMtSIyHyrBIc/LXRZz0WWLtVqUS4jvJAB65qVu2OrPGyG7bBGCeEZqrpIDtit+ICmFDc69eA7XEn1r3/wAQ3o6XD0jdxXvEvjmi2LVDeTXtQB4llagE1e6ulM07njY7kNQx4MHvGhbTaEe5GPxp7MKQwkvG/rNn3rxZpSoPMfcedD9aYxIpiTuj5RSthSK+si4xmtwy+f5VVFub7wQ/5akW41Hwib6Vg3Zacrjf9KxynXiAHtVYF1qf/Zb6V6brUd+KBsDfpQFnT/8Ah5agz3l8wAWJBGvudz+WPrV4jt11O2WVlSOxG8Y3LzHwfORw+nU+1V/szol5D2RgtwQlxMhklz1DMP2G1WwssdvDCg4VjQKB6AYFPH3Y8rqHAHHBJACFMj7giRH4WGP1/GhJrC0m1X46aSWF1uEuVTlfK4UqdwdwQR9KZcfWvOYavf6ctv0RwwXd0sYuZdMvzGxKHltGw9s8X7VXNX/4dzahfm5bUEtVKACN+K4Zd+gZiNqtMcnLkDqFz7UT8Wsg76t08GrD2X+CkZL7CXRtNbs1YmMTLNbqO/8AC2REzEnqSGOR+FR3d1olxOLi+g1NJTkd6GdHceWANx6U9aReaJEeRBjBUgMpreS7IUm3kj4+gEmQPypR2+yNS0+rFNrOLG3B0zRo7eBhi0Unls8jnfKYyq7ZJ64WkXabsYl9p01/eX0a6q+W5zMIogR0THljxO+34U11A6paRS3U+p20kzrhXKcuO1/mC7liOnXf0oCfX9AgsUtudPMyLgzIPtG3yx4uu564xVFhlk4SJPIods5Pc2rwqhkwoGQMHY+GdvCs0mVUvlkuIxJEGHEpbAIzVw1fUNB1N4reLSJXdfkjifgLe+Mk/jTbR+zAIEh0eysl8DMWmf6ZwKxL4U0vJ0Vj8uPpWJOy9y+p6gYxcKk+7IRt3NyVXA8eLx/apZdEvGupS0cVupY4EkoG2fSr9aaXbWqFUjTfY8KBc/Si4oooh9lFGnnhRWMeGEO3YZM859FBtuy805AE+fPlwMw+pwKC1zTF0m5SAT81+DiccPDw+QO5romtakul6ZPeupflL3UB+ZvBfxNcTur7XLq5luZrPMkrF238TWpUukZht7Y3HSvQSKSJcav/AGE/5q9Nxq/9i/1Viyg6BNekjzpGJ9X/ALF/qrOZrDH/ANIB/iosB2QnUUNH8z/3qADauRvbRj3airMyBBz1CuTuAadiCV60fGRy19hS4nv7UanyL7UrGVtceQqZCB5UECPOpUbakaDeMeQorR4lvNVtoHxwtIOL2G5/SlZkwKy2u2tp1mT5kP1oYLs7jYXkfNEeeKsmuONy2didqqHZDUGntLi8fbvclPXxY/TA/GnHxYzjaqYYy1tkvkTjtSGRlrBLS34nNbrPVqOexkJM1uHpcJ6kSbNKhpjAPXrqsg3JB8xQqSVOjZooOCj9utK1Z7r4yJDPaIuFSL5k9x40l0Xs3qWsuC8EtrbbEzTDH0HjXVHm4F26mhZLjJ361aOeSjRh44t2yLR9JsdGh5dlGFcjvSnd29zR/H1GdqEE2a2WSoyuTtm7oKDVsG2oZpVjRnY91Rk0qOrSTXSrb/IBkDPzVLJNQVsrixSyOkJu2uoPJqPwRUqlv5jHExHX6VXTLTntrJzNTjJILcgE7b9T4+NV8kYqad8lXHXgIEpA+Y1nMB96g4qziOK1YE3MNamRqi4tjXgJNAG7OPECho2BeTA+9UxC560FG3ek/vmgQVnvb7UdGw5a+wpXk5600hUclNvuigCoq2BW4bahw2a2DE4VcljsAPE1g2F21rcX8ohtY2kY74G2Pc+FNT2WvFjzJcW6MPulifzqxaQLbSbMwRrxysMyN61BdXPMO6k+1d+P40EvLs5JZZN+PRGt4um2dvarjlwxAs/gWJy351tDrcT/ACupHoaQ3kjZbjThU+DDf8sUFDcJGoS4t0YIdnVcFl8j605xriJlc8svEeooem9EJqIzgEVQr2ZoEHwuOFQOJuLIYncfhiglv7/OVuMZ81zU22jWl9HUI78HbiH1oqO6BwMiuZ2+q3ozxKr4642pvYa0CQJGMbfzdKDOp0SCbOKL5wRCxOMVW7G87itlTnpvSLtF2wHMa1svtChwzLvihhTLdeamisxdlAHUk0rftBBHeRW/ECXGSwOwFc31HU7y9j5QD4z3gT1FeQ3DpeZCfKgCLnptUcmRxXCL4sal2X9u1AF4FiRWgU4dyd87Yx+dWuKUMqlehGRXK9BnDpMlyAszd5c74xTdu1V8oBWVPYIKnDM23sVy4EorVHRVw2VbGPvA1Q73XhHqkzWMMPIVsIGU4bG2cetLLrtHqVxG0T3b8tuqoAuR5GlhmGepom1L0ZxqUA++vZ7+6e4uW4nbA6YwPKoc7UJzhkniAr3m7dc1k37sL4vU16WJHlQXOO3rW4m23NMTCC2OpzWcdC80Z6/nXvNHnQIJMhyKCtmyrnzY/rUolBJAztQUFxGkRJYDvEdfWgA0k9aawJmGM4+6P0oCw0y/1G3NzZQGSNSRkEbn0p3Bp2pLDGrWrghQCD7VqmK0c9DEVtFIyzRsOocEfWsrKyuzb6LVDcSCSQ8X3iaJR2Ygk7msrK9M4we66HIB28aSz9PxrKypyGiGYDltCAFRctt4moLZeN2U5AA8D1rKysS7RpDGa1iiYcAIHXGaItoUkdQ2frWVlVj2YfR7e3k9nbfDwORHIcEHwHpQdpDGYwvCACd8eNZWVj7h6GzWkUUeUBzjrmq9qpMU4ZNjisrKXyEtB4H5nunXcyM/C3zA70I+pXCyFBwYB8RWVleeujtmzU6lcZ+4P8NeHUrg+K/SvKytEyazu555xGz4BBPdFb2U8s8jB5Dt5e9eVlAy4SaHa/FyIHmVQqkAMPH8Ki0zTYLiaVZOLCMVGCPOvaymAYllbpOYxGpA8SozRPZvstpt2gurkTSvxE8LP3fm8qyspMEXFtC0t8xGyh4EAKgINs0rHYvQeaT8Eu+c7+dZWUAMLWwt9NtvhrNOXEmcKKmVQVBJPSsrKoTZ/9k="
+                        alt="Service app in Egypt" class="d-block w-100">
+                    <div class="container">
+                        <h2>Serving All Over Egypt</h2>
+                        <p>From Cairo to Alexandria and beyond — we're expanding every day to bring services closer to
+                            your doorstep.</p>
+                        <a href="#signup" class="btn-get-started">Join Now</a>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+                </a>
+
+                <ol class="carousel-indicators"></ol>
+
+            </div>
+
+        </section>
+        <!-- /Hero Section -->
+
+        <!-- Featured Services Section -->
+        <section id="featured-services" class="featured-services section">
+            <div class="container">
+                <div class="row gy-4">
+
+                    <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="fas fa-tools icon"></i></div>
+                            <h4><a href="#" class="stretched-link">Plumbing</a></h4>
+                            <p>Quick and reliable plumbing services for leaks, clogs, and pipe repairs at home.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="fas fa-bolt icon"></i></div>
+                            <h4><a href="#" class="stretched-link">Electrical</a></h4>
+                            <p>Professional electricians for safe installation and repair of switches and wiring.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="fas fa-broom icon"></i></div>
+                            <h4><a href="#" class="stretched-link">Cleaning</a></h4>
+                            <p>Top-quality cleaning services for homes and offices using trusted products and tools.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                    <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-item position-relative">
+                            <div class="icon"><i class="fas fa-wind icon"></i></div>
+                            <h4><a href="#" class="stretched-link">AC Maintenance</a></h4>
+                            <p>Experienced technicians for fast and efficient air conditioner cleaning and repairs.</p>
+                        </div>
+                    </div><!-- End Service Item -->
+
+                </div>
+            </div>
+        </section>
+        <!-- /Featured Services Section -->
+
+        <!-- Call To Action Section -->
+        <section id="call-to-action" class="call-to-action section accent-background">
+
+            <div class="container">
+                <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="col-xl-10">
+                        <div class="text-center">
+                            <h3>In an emergency? Need help now?</h3>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                officia deserunt mollit anim id est laborum.</p>
+                            <a class="cta-btn" href="#appointment">Make an Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- /Call To Action Section -->
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>About Us</h2>
+                <p>Connecting You with Trusted Home Service Providers Across Egypt</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+                <div class="row gy-4">
+
+                    <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/img/about.jpg" class="img-fluid" alt="Service overview image">
+                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"
+                            title="Watch how it works"></a>
+                    </div>
+
+                    <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Your Go-To Platform for Reliable Local Services</h3>
+                        <p class="fst-italic">
+                            We make it easy to find and book professional service providers for all your home needs —
+                            anytime, anywhere in Egypt.
+                        </p>
+                        <ul>
+                            <li><i class="bi bi-check2-all"></i> <span>Verified professionals for plumbing, electrical
+                                    work, cleaning, and more.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>Transparent pricing and secure online booking
+                                    through our platform.</span></li>
+                            <li><i class="bi bi-check2-all"></i> <span>Support available 7 days a week to assist with
+                                    your service needs and questions.</span></li>
+                        </ul>
+                        <p>
+                            Whether it’s a leaky pipe, a broken socket, or you just need help around the house — we’re
+                            here to match you with someone who can help, quickly and reliably.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- /About Section -->
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+
+                    <!-- Providers -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item d-flex align-items-center w-100 h-100">
+                            <i class="fas fa-users-cog flex-shrink-0"></i>
+                            <div>
+                                <span id="providers-count" class="purecounter">0</span>
+                                <p>Providers</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Categories -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item d-flex align-items-center w-100 h-100">
+                            <i class="fas fa-briefcase-medical flex-shrink-0"></i>
+                            <div>
+                                <span id="service-categories-count" class="purecounter">0</span>
+                                <p>Service Categories</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Services -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item d-flex align-items-center w-100 h-100">
+                            <i class="fas fa-clipboard-check flex-shrink-0"></i>
+                            <div>
+                                <span id="active-services-count" class="purecounter">0</span>
+                                <p>Active Services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Reviews -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item d-flex align-items-center w-100 h-100">
+                            <i class="fas fa-star flex-shrink-0"></i>
+                            <div>
+                                <span id="customer-reviews-count" class="purecounter">0</span>
+                                <p>Customer Reviews</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- /Stats Section -->
+
+        <!-- Features Section -->
+        <section id="features" class="features section">
+
+            <div class="container">
+
+                <div class="row justify-content-around gy-4">
+                    <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <img src="assets/img/features.jpg" alt="Platform Features" class="img-fluid">
+                    </div>
+
+                    <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <h3>Why Choose Our Platform?</h3>
+                        <p>We bring reliable service professionals to your doorstep with the tap of a button. Discover
+                            how we make everyday tasks easier for you.</p>
+
+                        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fa-solid fa-user-check flex-shrink-0"></i>
+                            <div>
+                                <h4><a href="#" class="stretched-link">Verified Providers</a></h4>
+                                <p>All professionals on our platform go through identity verification and background
+                                    checks to ensure your safety and satisfaction.</p>
+                            </div>
+                        </div><!-- End Icon Box -->
+
+                        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fa-solid fa-mobile-screen-button flex-shrink-0"></i>
+                            <div>
+                                <h4><a href="#" class="stretched-link">Easy Booking</a></h4>
+                                <p>Book services in minutes from your phone or computer — no need to make calls or wait
+                                    on hold.</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+                            <i class="fa-solid fa-credit-card flex-shrink-0"></i>
+                            <div>
+                                <h4><a href="#" class="stretched-link">Secure Payments</a></h4>
+                                <p>Pay safely online through Stripe with full transparency — no hidden fees or cash
+                                    handling required.</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+                            <i class="fa-solid fa-headset flex-shrink-0"></i>
+                            <div>
+                                <h4><a href="#" class="stretched-link">Support You Can Trust</a></h4>
+                                <p>Our support team is available every day to help you solve any issues or answer your
+                                    questions quickly.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Features Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Services</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+                <div id="services-list" class="row gy-4">
+                    <!-- Services will be dynamically added here by JS -->
+                </div>
+            </div>
+
+        </section>
+
+        <!-- /Services Section -->
+
+        <!-- Testimonials Section -->
+        <!-- <section id="testimonials" class="testimonials section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" "="">
+            <p>
+              <i class=" bi bi-quote quote-icon-left"></i>
+                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> -->
+        <!-- /Testimonials Section -->
+
+        <!-- Gallery Section -->
+        <!-- <section id="gallery" class="gallery section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-1.jpg"><img src="assets/img/gallery/gallery-1.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-2.jpg"><img src="assets/img/gallery/gallery-2.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-3.jpg"><img src="assets/img/gallery/gallery-3.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-4.jpg"><img src="assets/img/gallery/gallery-4.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-5.jpg"><img src="assets/img/gallery/gallery-5.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-6.jpg"><img src="assets/img/gallery/gallery-6.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-7.jpg"><img src="assets/img/gallery/gallery-7.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/gallery/gallery-8.jpg"><img src="assets/img/gallery/gallery-8.jpg" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> -->
+        <!-- /Gallery Section -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contact</h2>
+                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            </div><!-- End Section Title -->
+
+            <!-- Map -->
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+                <div id="map" style="height: 400px; width: 100%; border-radius: 10px;"></div>
+            </div>
+            <!-- End Map -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+
+                    <div class="col-lg-6">
+                        <div class="row gy-4">
+
+                            <div class="col-lg-12">
+                                <div class="info-item d-flex flex-column justify-content-center align-items-center"
+                                    data-aos="fade-up" data-aos-delay="200">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h3>Address</h3>
+                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="info-item d-flex flex-column justify-content-center align-items-center"
+                                    data-aos="fade-up" data-aos-delay="300">
+                                    <i class="bi bi-telephone"></i>
+                                    <h3>Call Us</h3>
+                                    <p>+1 5589 55488 55</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="info-item d-flex flex-column justify-content-center align-items-center"
+                                    data-aos="fade-up" data-aos-delay="400">
+                                    <i class="bi bi-envelope"></i>
+                                    <h3>Email Us</h3>
+                                    <p>info@example.com</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form id="contactForm" method="post" class="php-email-form" data-aos="fade-up"
+                            data-aos-delay="500">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                        required="">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="4" placeholder="Message"
+                                        required=""></textarea>
+                                </div>
+
+                                <!-- Hidden Location Fields -->
+                                <input type="hidden" name="latitude" id="latitude">
+                                <input type="hidden" name="longitude" id="longitude">
+
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                    <button type="submit" id="submitButton">Send Message</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+            </div>
+
+        </section><!-- /Contact Section -->
+
+        <!-- Leaflet CSS and JS -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var map = L.map('map').setView([30.0444, 31.2357], 10); // Cairo default view
+
+                // Load OpenStreetMap tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; OpenStreetMap contributors'
+                }).addTo(map);
+
+                // Try to get user's location
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        var lat = position.coords.latitude;
+                        var lng = position.coords.longitude;
+
+                        // Update map and add marker
+                        map.setView([lat, lng], 14);
+                        L.marker([lat, lng]).addTo(map)
+                            .bindPopup('أنت هنا!').openPopup();
+
+                        // Set hidden form values
+                        document.getElementById("latitude").value = lat;
+                        document.getElementById("longitude").value = lng;
+                    }, function () {
+                        alert("لم نتمكن من تحديد موقعك الجغرافي.");
+                    });
+                } else {
+                    alert("متصفحك لا يدعم خاصية تحديد الموقع.");
+                }
+            });
+        </script>
+        <script src="/assets/js/Home/ContactUs.js"></script>
+
+    </main>
+
+    <footer id="footer" class="footer light-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Medicio</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>A108 Adam Street</p>
+                        <p>New York, NY 535022</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href=""><i class="bi bi-twitter-x"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Terms of service</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Product Management</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Hic solutasetp</h4>
+                    <ul>
+                        <li><a href="#">Molestiae accusamus iure</a></li>
+                        <li><a href="#">Excepturi dignissimos</a></li>
+                        <li><a href="#">Suscipit distinctio</a></li>
+                        <li><a href="#">Dilecta</a></li>
+                        <li><a href="#">Sit quas consectetur</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Nobis illum</h4>
+                    <ul>
+                        <li><a href="#">Ipsam</a></li>
+                        <li><a href="#">Laudantium dolorum</a></li>
+                        <li><a href="#">Dinera</a></li>
+                        <li><a href="#">Trodelas</a></li>
+                        <li><a href="#">Flexo</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Medicio</strong> <span>All Rights Reserved</span>
+            </p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/Nav.js"></script>
+    <script src="assets/js/Auth/profile.js"></script>
+    <script src="assets/js/Home/services.js"></script>
+    <script src="assets/js/Home/status.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // أنشئ الخريطة بشكل مبدئي في أي مكان (سيتغير لاحقًا)
+            var map = L.map('map').setView([30.0444, 31.2357], 10); // Default: Cairo
+
+            // البلاطات من OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // جلب الموقع الحالي للمستخدم
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+
+                    // إعادة توجيه الخريطة إلى موقع المستخدم
+                    map.setView([lat, lng], 14);
+
+                    // وضع Marker على الموقع
+                    L.marker([lat, lng])
+                        .addTo(map)
+                        .bindPopup('أنت هنا!')
+                        .openPopup();
+                }, function (error) {
+                    alert("لم نتمكن من تحديد موقعك. تأكد من منح الإذن للموقع.");
+                });
+            } else {
+                alert("المتصفح لا يدعم خاصية تحديد الموقع الجغرافي.");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
